@@ -1,0 +1,3752 @@
+
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>크로우캐년홈</title>
+        <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" >
+        <link rel="apple-touch-icon" href="./favicon.png" />
+      
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Oswald:wght@200;300;400;500;600;700&family=Overpass:wght@700&display=swap">
+        <style>
+          /* html {scroll-behavior: smooth; 부드럽게 } */
+          /*
+              font-family: 'Montserrat', sans-serif;
+              font-family: 'Oswald', sans-serif; 
+              font-family: 'Overpass', sans-serif;
+              */
+    
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
+
+
+        /*mainBanner*/
+        #mainBanner {
+            width: 100%;
+            height: 615px;
+            position: relative;
+        }
+
+        .slider {
+            width: 100%;
+            height: 615px;
+            z-index: 0;
+        }
+
+        #mainBanner .bx-wrapper img {
+            width: 52%;
+            height: 100%;
+            z-index: 0;
+            border-width: 2px 2px 2px 0px;
+            border-color: #000;
+            border-style: solid;
+            border-radius: 0 1000px 1000px 0;
+        }
+
+        /* .sliderBg1 img, .sliderBg2 img, .sliderBg3 img{width: 910px; height: 615px; } */
+        #mainBanner .bx-wrapper img:first-child:hover {
+            transform: scale(1);
+        }
+
+        #mainBanner .bx-wrapper .bx-pager {
+            display: none;
+        }
+
+        #mainBanner .bx-wrapper .bx-prev {
+            display: none;
+        }
+
+        #mainBanner .bx-wrapper .bx-next {
+            display: none;
+        }
+
+        .sliderBg1,
+        .sliderBg2,
+        .sliderBg3 {
+            width: 100%;
+            height: 615px;
+        }
+
+        .sliderBg1 {
+            background-color: #FCEBB5;
+        }
+
+        .sliderBg2 {
+            background-color: #CECFD3;
+        }
+
+        .sliderBg3 {
+            background-color: #B9D8B8;
+        }
+
+        .mainText {
+            position: absolute;
+            top: 50%;
+            right: 12%;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+
+        h2 {
+            font-size: 140px;
+            font-family: 'Oswald', sans-serif;
+            font-weight: bold;
+            text-align: center;
+            line-height: 120px;
+        }
+
+        .fh2 {
+            color: #333;
+        }
+
+        .mainTextImg {
+            margin-bottom: 30px;
+        }
+
+        .mainTextImg img {
+            width: 540px;
+        }
+
+        .mainText p {
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 32px;
+            text-align: center;
+        }
+
+        .moreBtn {
+            width: 170px;
+            height: 170px;
+            background-color: rgb(255, 255, 255, 0.6);
+            position: absolute;
+            top: 60px;
+            border-radius: 170px;
+            transform-origin: center;
+            right: 10%;
+            cursor: pointer;
+        }
+
+        .moreBtn img {
+            width: 150px;
+            height: 150px;
+            transform-origin: center;
+            animation: rotate 10s linear infinite;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+
+        .moreBtn p {
+            font-weight: bold;
+            position: absolute;
+            top: 80px;
+            right: 60px;
+            transform-origin: center;
+        }
+
+        @keyframes rotate {
+            100% {
+                transform-origin: center;
+                transform: rotate(360deg);
+                ;
+            }
+        }
+
+        .scrollBtn {
+            position: absolute;
+            bottom: 40px;
+            right: 40px;
+            transition: 0.4s ease-out;
+        }
+
+        .scrollBtnText {
+            width: 12px;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        .scrollBtn:hover {
+            background-color: black;
+            transform: scale(1.2);
+        }
+
+        .scrollBtn p {
+            font-size: 12px;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 50px;
+            transform: rotate(90deg);
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .scrollImg {
+            overflow: hidden;
+        }
+
+        .scrollImg img {
+            width: 12px;
+            height: 42px;
+            animation: scrollDown 1.2s ease-out infinite;
+        }
+
+
+        @keyframes scrollDown {
+            0% {
+                transform: translateY(-44px);
+                ;
+            }
+
+            100% {
+                transform: translateY(44px);
+                ;
+            }
+        }
+
+
+        /*slideLine*/
+        .slideLineBox {
+            clear: both;
+            position: relative;
+            top: 694px;
+            background-color: #f8f8f8;
+        }
+
+        .slideLine1 {
+            width: 100%;
+            height: 2px;
+            background-color: black;
+            margin-bottom: 25px;
+        }
+
+        .slideLine2 {
+            width: 100%;
+            height: 2px;
+            background-color: black;
+            margin-top: -30px;
+        }
+
+        .marquee {
+            margin: auto;
+            height: 80px;
+            width: 1920px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .marquee div {
+            display: block;
+            width: 202%;
+            height: 80px;
+            position: absolute;
+            overflow: hidden;
+            -webkit-animation: marquee 10s linear infinite;
+            animation: marquee 10s linear infinite;
+        }
+
+        .marquee span {
+            float: left;
+            width: 50%;
+            font-size: 24px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+
+        @-webkit-keyframes marquee {
+            0% {
+                left: 0;
+            }
+
+            100% {
+                left: -100%;
+            }
+        }
+
+        @keyframes marquee {
+            0% {
+                left: 0;
+            }
+
+            100% {
+                left: -100%;
+            }
+        }
+
+
+
+        /*header*/
+        header {
+            height: 82px;
+            width: 100%;
+            background-color: #f8f8f8;
+            z-index: 99;
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: opacity 1s forwards;
+        }
+
+        @keyframes opacity {
+            0% {
+                opacity: 0.8;
+            }
+
+            100% {
+                opacity: 1;
+            }
+
+        }
+
+        h1 {
+            font-size: 0;
+        }
+
+        .logo {
+            margin-top: 13px;
+            margin-left: 40px;
+            display: block;
+            float: left;
+        }
+
+        .logo>img {
+            width: 54px;
+            height: 54px;
+        }
+
+        .headerLine {
+            margin-top: 20px;
+            margin-left: 40px;
+            float: left;
+            width: 1px;
+            height: 40px;
+            background-color: #e0e0e0;
+        }
+
+        .gnb {
+            margin: 30px 0;
+            font-size: 16px;
+            animation: opacityScale 1s forwards;
+        }
+
+        @keyframes opacityScale {
+            0% {
+                opacity: 0;
+                transform: scaleY(0.9);
+            }
+
+            20% {
+                opacity: 0.5;
+            }
+
+            100% {
+                opacity: 1;
+                transform: scaleY(1);
+            }
+
+        }
+
+        .gnb>ul {
+            display: flex;
+        }
+
+        .gnb>ul>li {
+            width: 110px;
+            font-weight: 700;
+            padding: 0 40px;
+            font-size: 16px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .gnb>ul>li:nth-child(3) {
+            margin-right: 20px;
+        }
+
+        .gnb>ul>li:nth-child(4) {
+            margin-right: 40px;
+        }
+
+        .gnb a {
+            display: block;
+            color: #333;
+            position: relative;
+            transition: 0.2s;
+        }
+
+        .gnb a:hover {
+            opacity: 0.5;
+        }
+
+        .gnb>ul>li>a::after {
+            content: '';
+            display: block;
+            height: 2px;
+            background-color: black;
+            width: 0%;
+            transition: 1s;
+            position: absolute;
+        }
+
+        .gnb>ul>li>a:hover::after {
+            width: 100%;
+            left: 0;
+        }
+
+        .gnbSubMenu {
+            display: none;
+            opacity: 0;
+            width: 200px;
+            margin-top: 10px;
+            background-color: black;
+            font-size: 14px;
+            z-index: 99;
+            padding-top: 40px;
+            padding-left: 20px;
+            padding-bottom: 40px;
+            border-radius: 5px;
+        }
+
+        .list:hover .gnbSubMenu {
+            opacity: 1;
+            display: block;
+            transition: 1s;
+        }
+
+        .gnbSubMenu li {
+            font-weight: 700;
+            font-size: 16px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .gnbSubMenu a {
+            display: block;
+            color: #fff;
+            height: 20px;
+            line-height: 20px;
+            margin-bottom: 30px;
+        }
+
+        .gnbSubMenu li:last-child a {
+            margin-bottom: 0;
+        }
+
+        .gnb2 {
+            width: 80px;
+            height: 30px;
+            display: flex;
+            position: absolute;
+            right: 130px;
+            margin-top: -5px;
+        }
+
+        .gnb2 img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .search {
+            margin-right: 10px;
+        }
+
+        .search input {
+            display: none;
+        }
+
+        .headerUnderLine {
+            height: 2px;
+            width: 100%;
+            background-color: black;
+            position: absolute;
+            bottom: 0;
+        }
+
+
+
+        /*hamburger*/
+        .hamburger {
+            width: 100px;
+            height: 80px;
+            background-color: black;
+            float: right;
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 4;
+        }
+
+        .hamburgerOpen {
+            width: 100px;
+            height: 80px;
+            position: fixed;
+            right: 0;
+            top: 0;
+            background-color: black;
+            padding: 30px 40px 0 0;
+            transition: 1s;
+            z-index: 5;
+        }
+
+        .hamburgerOpen.active {
+            right: 0px;
+            width: 340px;
+            height: 100%;
+            animation: opacity 1s forwards;
+        }
+
+        .hamburgerIcon {
+            width: 26px;
+            height: 18px;
+            margin: 32px auto;
+            transform-origin: center;
+            cursor: pointer;
+        }
+
+        .hamburgerIcon:hover {
+            opacity: 0.5;
+            transition: all 1s;
+            transform: scale(0.9);
+        }
+
+        .hamburger span {
+            display: block;
+            width: 26px;
+            height: 2px;
+            background-color: rgb(255, 255, 255);
+            margin: 6px auto;
+            transition: 0.5s;
+        }
+
+        .hamburger span:nth-child(2) {
+            width: 18px;
+            margin-right: 0px;
+        }
+
+        .hamburgerIcon.active span:nth-child(1) {
+            -webkit-transform: translateY(13px) rotate(-45deg);
+            transform: translateY(13px) rotate(-45deg);
+        }
+
+        .hamburgerIcon.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburgerIcon.active span:nth-child(3) {
+            -webkit-transform: translateY(-13px) rotate(45deg);
+            transform: translateY(-3px) rotate(45deg);
+        }
+
+        .menuWrapper {
+            display: none;
+            opacity: 0;
+            transition: 0.5s;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .hamburgerMenu {
+            margin: 140px 0 30px 0;
+            float: right;
+            text-align: right;
+            position: relative;
+            overflow: hidden;
+            padding-bottom: 0.4rem;
+            font-size: 0;
+            cursor: pointer;
+        }
+
+        .hamburgerMenu li {
+            font-weight: 700;
+            font-size: 24px;
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 20px;
+            line-height: 1;
+        }
+
+        .menuWrapper.active {
+            transform: translateX(20em);
+            animation: up 1000ms ease-out forwards;
+            z-index: 99;
+        }
+
+        @keyframes up {
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes draw {
+            100% {
+                width: 100%;
+            }
+        }
+
+        .hamburgerMenu li:last-child {
+            margin-bottom: 0;
+            width: 182px;
+        }
+
+        .hamburgerMenu li:hover {
+            margin-bottom: 0;
+        }
+
+        .hamburgerMenu a {
+            display: block;
+            color: #fff;
+            height: 30px;
+            line-height: 30px;
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .hamburgerMenu a::after {
+            content: '';
+            display: block;
+            height: 2px;
+            background-color: #fff;
+            width: 0%;
+            transition: 1s;
+            position: absolute;
+            right: 0;
+        }
+
+        .hamburgerMenu a:hover::after {
+            width: 20%;
+            right: 0;
+        }
+
+        .latelyProduct {
+            margin-bottom: 142px;
+            float: right;
+            text-align: right;
+            width: 170px;
+        }
+
+        .latelyProduct li {
+            font-weight: 700;
+            font-size: 18px;
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .latelyProduct div {
+            float: right;
+            transition: 0.5s;
+        }
+
+        .latelyProduct a:nth-of-type(1) {
+            margin-right: 15px;
+        }
+
+        .latelyProduct div:hover {
+            transform: translateX(-10px);
+        }
+
+        .sns {
+            clear: both;
+            text-align: right;
+            float: right;
+        }
+
+        .sns li {
+            float: left;
+            margin-left: 10px;
+        }
+
+        .sns a {
+            display: block;
+            line-height: 30px;
+        }
+
+        .sns img {
+            width: 30px;
+            height: 30px;
+        }
+
+
+        /*sectionTitle1*/
+        .sectionTitle1 {
+            height: 92px;
+            margin: auto;
+            margin-top: 180px;
+            text-align: center;
+            margin-bottom: 60px;
+            clear: both;
+        }
+
+        .sectionTitle1 h3 {
+            font-size: 44px;
+            font-weight: bold;
+            font-family: 'Oswald', sans-serif;
+            line-height: 65px;
+        }
+
+        .sectionTitle1 p {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+
+        /*productRed*/
+        #red {
+            position: sticky;
+            top: 82px;
+            height: calc(100vh - 82px);
+            overflow: hidden;
+            /* 꼭 top이 필요, top만 사용가능 */
+            width: 50%;
+            background-color: #BC321B;
+            float: left;
+            padding-top: 60px;
+        }
+
+        #red span {
+            width: 1700px;
+            font-size: 220px;
+            font-weight: bold;
+            color: #fff;
+            font-family: 'Oswald', sans-serif;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: -62px;
+            transform: translateY(-50%);
+        }
+        .redImg1 {
+            width: 110%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .redImg2 {
+            width: 530px;
+            height: 530px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+
+        /*redAside*/
+        #redAside {
+            width: 50%;
+            background-color: #fff;
+            height: auto;
+            float: left;
+            padding: 100px 166px 100px 125px;
+            border-radius: 0 0 200px 0;
+        }
+
+        .redTitle {
+            height: 95px;
+            margin: 0 auto 20px auto;
+            text-align: center;
+            color: #333;
+            line-height: 50px;
+        }
+
+        .redTitle h3 {
+            font-size: 36px;
+            font-family: 'Oswald', sans-serif;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .redTitle span {
+            width: 6px;
+            height: 6px;
+            background-color: #333;
+            position: absolute;
+            bottom: 8px;
+            margin-left: 3px;
+            border-radius: 50%;
+        }
+
+        .redTitle p {
+            font-size: 34px;
+            font-weight: bold;
+        }
+
+        .topText1 {
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .topText1 span {
+            width: 30px;
+            height: 2px;
+            background-color: #BC321B;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .topText1 p {
+            font-size: 16px;
+            line-height: 24px;
+            margin-top: 20px;
+            margin-bottom: 12px;
+        }
+
+        .topText1 button {
+            font-size: 14px;
+            width: 70px;
+            height: 18px;
+            line-height: 14px;
+            background-color: transparent;
+            border: none;
+            margin-bottom: 60px;
+        }
+
+        .topText1 button a {
+            color: #BBBBBB;
+        }
+
+        .topText1 button img {
+            width: 18px;
+            height: 18px;
+        }
+
+        .redProduct {
+            margin: 0 auto;
+            width: 580px;
+        }
+
+        .redProduct li {
+            float: left;
+        }
+
+        .redProduct a {
+            color: #333;
+            display: block;
+        }
+
+        .redProduct a.active .redImg {
+            background-color: black;
+        }
+
+        .redProductImg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 3;
+            display: none;
+            cursor: pointer;
+            transform-origin: center;
+            transition: 0.6s;
+            /*  transform: translate(-50%, -50%); */
+        }
+
+        .redProductImg li:nth-child(1) img {
+            width: 150px;
+            height: 188px;
+        }
+
+        .redProductImg li:nth-child(2) img {
+            width: 160px;
+            height: 240px;
+        }
+
+        .redProductImg li:nth-child(3) img {
+            width: 180px;
+            height: 180px;
+        }
+
+        .redProductImg li:nth-child(4) img {
+            width: 220px;
+            height: 228px;
+        }
+
+        .redProductImg li:nth-child(5) img {
+            width: 260px;
+            height: 136px;
+        }
+
+        .redProductImg li:nth-child(6) img {
+            width: 300px;
+            height: 86px;
+        }
+
+        .redProductImg li:nth-child(7) img {
+            width: 48px;
+            height: 180px;
+        }
+
+
+        .redProduct li span {
+            display: block;
+            height: 1px;
+            width: 580px;
+            background-color: #E0E0E0;
+        }
+
+        .redProduct li h4 {
+            font-size: 30px;
+            font-weight: bold;
+            line-height: 34px;
+            margin-bottom: 10px;
+            margin-top: 40px;
+        }
+
+        .redProduct li p {
+            margin-bottom: 60px;
+            float: left;
+        }
+
+        .redArrow {
+            float: right;
+            position: relative;
+            top: -50px;
+            width: 40px;
+            height: 40px;
+        }
+
+        .redProduct li:hover {
+            cursor: pointer;
+            animation: leftMove 0.6s ease-out forwards;
+        }
+
+        @keyframes leftMove {
+            100% {
+                margin-left: 30px;
+            }
+        }
+
+        .redProduct li:hover .redArrow {
+            filter: brightness(0);
+            transition: 0.6s;
+        }
+
+
+        /*productYellow*/
+        #yellow {
+            position: sticky;
+            top: 82px;
+            height: calc(100vh - 82px);
+            overflow: hidden;
+            /* 꼭 top이 필요, top만 사용가능 */
+            width: 50%;
+            background-color: #FFDE7A;
+            float: left;
+            margin-top: 120px;
+            padding-top: 60px;
+        }
+
+        #yellow span {
+            width: 1700px;
+            font-size: 220px;
+            font-weight: bold;
+            color: #333;
+            font-family: 'Oswald', sans-serif;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: -220px;
+            transform: translateY(-50%);
+        }
+
+        .yellowImg1 {
+            width: 110%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .yellowImg2 {
+            width: 530px;
+            height: 530px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /*yellowAside*/
+        #yellowAside {
+            width: 50%;
+            height: auto;
+            background-color: #fff;
+            padding: 100px 166px 100px 125px;
+            float: left;
+            margin-top: 120px;
+            border-radius: 0 0 0 200px;
+        }
+
+        .yellowTitle {
+            height: 95px;
+            margin: 0 auto 20px auto;
+            text-align: center;
+            color: #333;
+            line-height: 50px;
+        }
+
+        .yellowTitle h3 {
+            font-size: 36px;
+            font-family: 'Oswald', sans-serif;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .yellowTitle span {
+            width: 6px;
+            height: 6px;
+            background-color: #333;
+            position: absolute;
+            bottom: 8px;
+            margin-left: 3px;
+            border-radius: 50%;
+        }
+
+        .yellowTitle p {
+            font-size: 34px;
+            font-weight: bold;
+        }
+
+        .topText2 {
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .topText2 span {
+            width: 30px;
+            height: 2px;
+            background-color: #FFDE7A;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .topText2 p {
+            font-size: 16px;
+            line-height: 24px;
+            margin-top: 20px;
+            margin-bottom: 12px;
+        }
+
+        .topText2 button {
+            font-size: 14px;
+            width: 70px;
+            height: 18px;
+            line-height: 14px;
+            background-color: transparent;
+            border: none;
+            margin-bottom: 60px;
+        }
+
+        .topText2 button a {
+            color: #BBBBBB;
+        }
+
+        .topText2 button img {
+            width: 18px;
+            height: 18px;
+        }
+
+        .yellowProduct {
+            margin: auto;
+            width: 580px;
+        }
+
+        .newTag {
+            width: 50px;
+            height: 20px;
+            background-color: black;
+            color: #fff;
+            font-size: 12px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+            text-align: center;
+            line-height: 19px;
+            border-radius: 2px;
+            float: left;
+            margin-right: 12px;
+        }
+
+        .yellowProduct li {
+            float: left;
+        }
+
+        .yellowProduct a {
+            color: #333;
+            display: block;
+        }
+
+        .yellowProduct a.active .yellowImg {
+            background-color: black;
+        }
+
+        .yellowProductImg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 3;
+            display: none;
+            cursor: pointer;
+            transform-origin: center;
+            transition: 0.6s;
+            /*  transform: translate(-50%, -50%); */
+        }
+
+        .yellowProductImg li:nth-child(1) img {
+            width: 180px;
+            height: 196px;
+        }
+
+        .yellowProductImg li:nth-child(2) img {
+            width: 160px;
+            height: 240px;
+        }
+
+        .yellowProductImg li:nth-child(3) img {
+            width: 230px;
+            height: 184px;
+        }
+
+        .yellowProductImg li:nth-child(4) img {
+            width: 220px;
+            height: 228px;
+        }
+
+        .yellowProductImg li:nth-child(5) img {
+            width: 260px;
+            height: 130px;
+        }
+
+        .yellowProductImg li:nth-child(6) img {
+            width: 200px;
+            height: 120px;
+        }
+
+        .yellowProductImg li:nth-child(7) img {
+            width: 130px;
+            height: 136px;
+        }
+
+        .yellowProduct li span {
+            display: block;
+            height: 1px;
+            width: 580px;
+            background-color: #E0E0E0;
+        }
+
+        .yellowProduct li h4 {
+            font-size: 30px;
+            font-weight: bold;
+            line-height: 34px;
+            margin-bottom: 10px;
+            margin-top: 40px;
+        }
+
+        .yellowProduct li p {
+            margin-bottom: 60px;
+            float: left;
+        }
+
+        .yellowArrow {
+            float: right;
+            position: relative;
+            top: -50px;
+            width: 40px;
+            height: 40px;
+        }
+
+        .yellowProduct li:hover {
+            cursor: pointer;
+            animation: leftMove 0.6s ease-out forwards;
+        }
+
+        .yellowProduct li:hover .yellowArrow {
+            filter: brightness(0);
+            transition: 0.6s;
+        }
+
+
+        /*productTurquoise*/
+        #turquoise {
+            position: sticky;
+            top: 82px;
+            height: calc(100vh - 82px);
+            overflow: hidden;
+            margin-top: 120px;
+            padding-top: 60px;
+            /* 꼭 top이 필요, top만 사용가능 */
+            width: 50%;
+            background-color: #218E9B;
+            clear: both;
+            float: left;
+        }
+
+        #turquoise span {
+            width: 1700px;
+            font-size: 220px;
+            font-weight: bold;
+            font-family: 'Oswald', sans-serif;
+            color: #fff;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: -290px;
+            transform: translateY(-50%);
+        }
+
+        .turquoiseImg1 {
+            width: 110%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .turquoiseImg2 {
+            width: 530px;
+            height: 530px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /*turquoiseAside*/
+        #turquoiseAside {
+            width: 50%;
+            background-color: #fff;
+            height: auto;
+            float: left;
+            padding: 100px 166px 100px 125px;
+            margin-top: 120px;
+            border-radius: 0 0 200px 0;
+        }
+
+        .turquoiseTitle {
+            height: 95px;
+            margin: 0 auto 20px auto;
+            text-align: center;
+            color: #fff;
+            line-height: 50px;
+        }
+
+        .turquoiseTitle h3 {
+            font-size: 36px;
+            font-family: 'Oswald', sans-serif;
+            font-weight: bold;
+            position: relative;
+        }
+        
+        .turquoiseTitle span {
+            width: 6px;
+            height: 6px;
+            background-color: #333;
+            position: absolute;
+            bottom: 8px;
+            margin-left: 3px;
+            border-radius: 50%;
+        }
+
+        .turquoiseTitle p {
+            font-size: 34px;
+            font-weight: bold;
+        }
+
+        .topText3 {
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .topText3 span {
+            width: 30px;
+            height: 2px;
+            background-color: #218E9B;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .topText3 p {
+            font-size: 16px;
+            line-height: 24px;
+            margin-top: 20px;
+            margin-bottom: 12px;
+        }
+
+        .topText3 button {
+            font-size: 14px;
+            width: 70px;
+            height: 18px;
+            line-height: 14px;
+            background-color: transparent;
+            border: none;
+            margin-bottom: 60px;
+        }
+
+        .topText3 button a {
+            color: #BBBBBB;
+        }
+
+        .topText3 button img {
+            width: 18px;
+            height: 18px;
+        }
+
+        .turquoiseProduct {
+            margin: 0 auto;
+            width: 580px;
+        }
+
+        .turquoiseProduct li {
+            float: left;
+        }
+
+        .turquoiseProduct a {
+            color: #333;
+            display: block;
+        }
+
+        .turquoiseProduct a.active .turquoiseImg {
+            background-color: black;
+        }
+
+        .turquoiseProductImg {
+            position: absolute;
+            width: 220px;
+            height: 220px;
+            left: 0;
+            top: 0;
+            z-index: 3;
+            display: none;
+            cursor: pointer;
+            transform-origin: center;
+            transition: 0.6s;
+            /*  transform: translate(-50%, -50%); */
+        }
+
+        .turquoiseProductImg li:nth-child(1) img {
+            width: 150px;
+            height: 188px;
+        }
+
+        .turquoiseProductImg li:nth-child(2) img {
+            width: 238px;
+            height: 238px;
+        }
+
+        .turquoiseProductImg li:nth-child(3) img {
+            width: 230px;
+            height: 178px;
+        }
+
+        .turquoiseProductImg li:nth-child(4) img {
+            width: 220px;
+            height: 228px;
+        }
+
+        .turquoiseProductImg li:nth-child(5) img {
+            width: 260px;
+            height: 130px;
+        }
+
+        .turquoiseProductImg li:nth-child(6) img {
+            width: 200px;
+            height: 120px;
+        }
+
+        .turquoiseProductImg li:nth-child(7) img {
+            width: 260px;
+            height: 140px;
+        }
+
+        .turquoiseProduct li span {
+            display: block;
+            height: 1px;
+            width: 580px;
+            background-color: #E0E0E0;
+        }
+
+        .turquoiseProduct li h4 {
+            font-size: 30px;
+            font-weight: bold;
+            line-height: 34px;
+            margin-bottom: 10px;
+            margin-top: 40px;
+        }
+
+        .turquoiseProduct li p {
+            margin-bottom: 60px;
+            float: left;
+        }
+
+        .turquoiseArrow {
+            float: right;
+            position: relative;
+            top: -50px;
+            width: 40px;
+            height: 40px;
+        }
+
+        .turquoiseProduct li:hover {
+            cursor: pointer;
+            animation: leftMove 0.6s ease-out forwards;
+        }
+
+        .turquoiseProduct li:hover .turquoiseArrow {
+            filter: brightness(0);
+            transition: 0.6s;
+        }
+
+
+
+        /*productDark*/
+        #dark {
+            position: sticky;
+            top: 82px;
+            height: calc(100vh - 82px);
+            overflow: hidden;
+            margin-top: 120px;
+            padding-top: 60px;
+            /* 꼭 top이 필요, top만 사용가능 */
+            width: 50%;
+            background-color: black;
+            float: left;
+        }
+
+        #dark span {
+            width: 1700px;
+            font-size: 220px;
+            font-weight: bold;
+            font-family: 'Oswald', sans-serif;
+            color: #fff;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: -160px;
+            transform: translateY(-50%);
+        }
+
+        .darkImg1 {
+            width: 110%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .darkImg2 {
+            width: 530px;
+            height: 530px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /*darkAside*/
+        #darkAside {
+            width: 50%;
+            background-color: #fff;
+            height: auto;
+            padding: 100px 166px 100px 125px;
+            float: left;
+            margin-top: 120px;
+            border-radius: 0 0 0 200px;
+        }
+
+        .darkTitle {
+            height: 95px;
+            margin: 0 auto 20px auto;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .darkTitle h3 {
+            font-size: 36px;
+            font-family: 'Oswald', sans-serif;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .darkTitle p {
+            font-size: 34px;
+            font-weight: bold;
+        }
+
+        .darkTitle span {
+            width: 6px;
+            height: 6px;
+            background-color: #333;
+            position: absolute;
+            bottom: 8px;
+            margin-left: 3px;
+            border-radius: 50%;
+        }
+
+        .topText4 {
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .topText4 span {
+            width: 30px;
+            height: 2px;
+            background-color: black;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .topText4 p {
+            font-size: 16px;
+            line-height: 24px;
+            margin-top: 20px;
+            margin-bottom: 12px;
+        }
+
+        .topText4 button {
+            font-size: 14px;
+            width: 70px;
+            height: 18px;
+            line-height: 14px;
+            background-color: transparent;
+            border: none;
+            margin-bottom: 60px;
+        }
+
+        .topText4 button a {
+            color: #BBBBBB;
+        }
+
+        .topText4 button img {
+            width: 18px;
+            height: 18px;
+        }
+
+        .darkProduct {
+            margin: 0 auto;
+            width: 580px;
+        }
+
+        .darkProduct li {
+            float: left;
+        }
+
+        .darkProduct a {
+            color: #333;
+            display: block;
+        }
+
+        .darkProduct a.active .darkImg {
+            background-color: black;
+        }
+
+        .darkProductImg {
+            position: absolute;
+            width: 220px;
+            height: 220px;
+            left: 0;
+            top: 0;
+            z-index: 3;
+            display: none;
+            cursor: pointer;
+            transform-origin: center;
+            transition: 0.6s;
+            /*  transform: translate(-50%, -50%); */
+        }
+
+
+        .darkProductImg li:nth-child(1) img {
+            width: 180px;
+            height: 196px;
+        }
+
+        .darkProductImg li:nth-child(2) img {
+            width: 150px;
+            height: 188px;
+        }
+
+        .darkProductImg li:nth-child(3) img {
+            width: 220px;
+            height: 228px;
+        }
+
+        .darkProductImg li:nth-child(4) img {
+            width: 260px;
+            height: 130px;
+        }
+
+        .darkProductImg li:nth-child(5) img {
+            width: 200px;
+            height: 120px;
+        }
+
+        .darkProductImg li:nth-child(6) img {
+            width: 48px;
+            height: 180px;
+        }
+
+        .darkProductImg li:nth-child(7) img {
+            width: 100px;
+            height: 206px;
+        }
+
+        .darkProduct li span {
+            display: block;
+            height: 1px;
+            width: 580px;
+            background-color: #E0E0E0;
+        }
+
+        .darkProduct li h4 {
+            font-size: 30px;
+            font-weight: bold;
+            line-height: 34px;
+            margin-bottom: 10px;
+            margin-top: 40px;
+        }
+
+        .darkProduct li p {
+            margin-bottom: 60px;
+            float: left;
+        }
+
+        .darkArrow {
+            float: right;
+            position: relative;
+            top: -50px;
+            width: 40px;
+            height: 40px;
+        }
+
+        .darkProduct li:hover {
+            cursor: pointer;
+            animation: leftMove 0.6s ease-out forwards;
+        }
+
+        .darkProduct li:hover .darkArrow {
+            filter: brightness(0);
+            transition: 0.6s;
+        }
+
+
+        /*indicator1*/
+        .indicator1 {
+            position: absolute;
+            margin-left: 40px;
+            bottom: 60px;
+        }
+
+        .indicatorLine1 {
+            width: 2px;
+            height: 0px;
+            background-color: #fff;
+            display: inline-block;
+            position: absolute;
+        }
+
+        .indicatorLine1.active {
+            animation: indicator1 0.6s ease-out forwards;
+        }
+
+        .indicatorLineBg1 {
+            background-color: rgba(255, 255, 255, 0.5);
+            width: 2px;
+            height: 120px;
+            display: inline-block;
+        }
+
+        .indicatorBtn1 {
+            width: auto;
+            height: auto;
+        }
+
+        .indicatorBtn1 p {
+            color: #fff;
+            font-family: 'Oswald', sans-serif;
+            font-weight: bold;
+            font-size: 12px;
+            margin-top: 2px;
+            text-align: center;
+        }
+
+        @keyframes indicator1 {
+            0% {
+                height: 0;
+            }
+
+            100% {
+                height: 30px;
+            }
+        }
+
+        .redUpBtn {
+            width: 48px;
+            height: 48px;
+            opacity: 0.5;
+            margin: 0 auto;
+        }
+
+        .redDownBtn {
+            width: 48px;
+            height: 48px;
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .redUpBtn a,
+        .redUpBtn img,
+        .redDownBtn a,
+        .redDownBtn img {
+            width: 48px;
+            height: 48px;
+        }
+
+
+
+        /*indicator2*/
+        .indicator2 {
+            position: absolute;
+            bottom: 60px;
+            right: 40px;
+        }
+        
+        .indicatorLine2 {
+            width: 2px;
+            height: 30px;
+            background-color: black;
+            display: inline-block;
+            position: absolute;
+        }
+
+        .indicatorLine2.active {
+            animation: indicator2 0.6s ease-out forwards;
+        }
+
+        .indicatorLineBg2 {
+            background-color: rgba(0, 0, 0, 0.3);
+            width: 2px;
+            height: 120px;
+            display: inline-block;
+        }
+
+        .indicatorBtn2 {
+            width: auto;
+            height: auto;
+        }
+
+        .indicatorBtn2 p {
+            color: #333;
+            font-family: 'Oswald', sans-serif;
+            font-weight: bold;
+            font-size: 12px;
+            margin-top: 2px;
+            text-align: center;
+        }
+
+        @keyframes indicator2 {
+            0% {
+                height: 30px;
+            }
+
+            100% {
+                height: 60px;
+            }
+        }
+
+        .yellowUpBtn {
+            width: 48px;
+            height: 48px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .yellowDownBtn {
+            width: 48px;
+            height: 48px;
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .yellowUpBtn a,
+        .yellowUpBtn img,
+        .yellowDownBtn a,
+        .yellowDownBtn img {
+            width: 48px;
+            height: 48px;
+        }
+
+
+        /*indicator3*/
+        .indicator3 { 
+            position: absolute;
+            margin-left: 40px;
+            bottom: 60px;
+        }
+
+        .indicatorLine3 {
+            width: 2px;
+            height: 60px;
+            background-color: #fff;
+            display: inline-block;
+            position: absolute;
+        }
+
+        .indicatorLine3.active {
+            animation: indicator3 0.6s ease-out forwards;
+        }
+
+        .indicatorLineBg3 {
+            background-color: rgba(255, 255, 255, 0.5);
+            width: 2px;
+            height: 120px;
+            display: inline-block;
+        }
+
+        .indicatorBtn3 {
+            width: auto;
+            height: auto;
+        }
+
+        .indicatorBtn3 p {
+            color: #fff;
+            font-family: 'Oswald', sans-serif;
+            font-weight: bold;
+            font-size: 12px;
+            margin-top: 2px;
+            text-align: center;
+        }
+
+        @keyframes indicator3 {
+            0% {
+                height: 60px;
+            }
+
+            100% {
+                height: 90px;
+            }
+        }
+
+        .turquoiseUpBtn {
+            width: 48px;
+            height: 48px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .turquoiseDownBtn {
+            width: 48px;
+            height: 48px;
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .turquoiseUpBtn a,
+        .turquoiseUpBtn img,
+        .turquoiseDownBtn a,
+        .turquoiseDownBtn img {
+            width: 48px;
+            height: 48px;
+        }
+
+
+
+        /*indicator4*/
+        .indicator4 {
+            position: absolute;
+            right: 40px;
+            bottom: 60px;
+        }
+
+        .indicatorLine4 {
+            width: 2px;
+            height: 90px;
+            background-color: #fff;
+            display: inline-block;
+            position: absolute;
+        }
+
+        .indicatorLine4.active {
+            animation: indicator4 0.6s ease-out forwards;
+        }
+
+        .indicatorLineBg4 {
+            background-color: rgba(255, 255, 255, 0.5);
+            width: 2px;
+            height: 120px;
+            display: inline-block;
+        }
+
+        .indicatorBtn4 {
+            width: auto;
+            height: auto;
+        }
+
+        .indicatorBtn4 p {
+            color: #fff;
+            font-family: 'Oswald', sans-serif;
+            font-weight: bold;
+            font-size: 12px;
+            margin-top: 2px;
+            text-align: center;
+        }
+
+        @keyframes indicator4 {
+            0% {
+                height: 90px;
+            }
+
+            100% {
+                height: 120px;
+            }
+        }
+
+        .darkUpBtn {
+            width: 48px;
+            height: 48px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .darkDownBtn {
+            width: 48px;
+            height: 48px;
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0.5;
+        }
+
+        .darkUpBtn a,
+        .darkUpBtn img,
+        .darkDownBtn a,
+        .darkDownBtn img {
+            width: 48px;
+            height: 48px;
+        }
+
+
+        /*about*/
+        #about {
+            width: 100%;
+            height: 1022px;
+            background-color: #CEDBF3;
+            margin-top: 130px;
+            position: relative;
+        }
+
+        .aboutLine1 {
+            width: 100%;
+            height: 2px;
+            background-color: black;
+            display: block;
+        }
+
+        .aboutLine2 {
+            width: 100%;
+            height: 2px;
+            background-color: black;
+            display: block;
+            position: absolute;
+            bottom: 0;
+        }
+
+        /*sectionTitle2*/
+        .sectionTitle2 {
+            height: 92px;
+            margin: auto;
+            margin-top: 80px;
+            text-align: center;
+            margin-bottom: 20px;
+            clear: both;
+        }
+
+        .sectionTitle2 h3 {
+            font-size: 44px;
+            font-weight: bold;
+            font-family: 'Oswald', sans-serif;
+            line-height: 65px;
+        }
+
+        .sectionTitle2 p {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        /*about 내용물*/
+        .aboutContent p {
+            font-size: 14px;
+            line-height: 22px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .moveText1,
+        .moveText2 {
+            position: relative;
+            width: 100%;
+        }
+
+        .moveText1 p,
+        .moveText2 p {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0;
+            padding-left: 100%;
+            display: inline-block;
+            white-space: nowrap;
+            animation-name: marquee-about;
+            animation-timing-function: linear;
+            animation-duration: 12s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes marquee-about {
+            from {
+                transform: translate(0%);
+            }
+
+            99%,
+            to {
+                transform: translate(-100%);
+            }
+        }
+
+        .moveText1 p {
+            position: absolute;
+            top: 150px;
+        }
+
+        .moveText2 p {
+            position: absolute;
+            top: 450px;
+        }
+
+        /*video*/
+        .videoBefore {
+            position: relative;
+            width: 60%;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        .videoBefore::before {
+            content: '';
+            width: 766%;
+            height: 142px;
+            position: absolute;
+            top: 235px;
+            background-size: auto 100%;
+            background-image: url('./images/aboutBackgroundImg.png');
+            background-repeat: repeat-x;
+            animation: kv-text 25s linear infinite;
+            animation-direction: reverse;
+        }
+
+        @keyframes kv-text {
+            0% {
+                transform: translate(-25%, 0);
+            }
+
+            100% {
+                transform: translate(-50%, 0);
+            }
+        }
+
+        .videoBox {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background-color: #CEDBF3;
+            overflow: hidden;
+            border: 6px solid black;
+        }
+
+        .videoMoreBtn {
+            position: absolute;
+            width: 170px;
+            height: 170px;
+            background-color: black;
+            border-radius: 170px;
+            transform-origin: center;
+            top: -80px;
+            right: -90px;
+        }
+
+        .videoMoreBtnBg img {
+            width: 150px;
+            height: 150px;
+            transform-origin: center;
+            animation: rotate 10s linear infinite;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+
+        .videoMoreText {
+            width: 70px;
+            height: 42px;
+            position: absolute;
+            top: 64px;
+            left: 55px;
+        }
+
+        .videoMoreText p {
+            font-weight: bold;
+            transform-origin: center;
+            color: #fff;
+        }
+
+        .playBtn {
+            width: 16px;
+            height: 18px;
+            position: absolute;
+            top: 30px;
+            right: 30px;
+        }
+
+
+        /*magazine*/
+        #magazine {
+            width: 100%;
+            height: 754px;
+            background-color: #f8f8f8;
+            margin: auto;
+            position: relative;
+        }
+
+        .sectionTitle3 {
+            height: 92px;
+            margin: auto;
+            margin-top: 130px;
+            text-align: center;
+            margin-bottom: 20px;
+            clear: both;
+        }
+
+        .sectionTitle3 h3 {
+            font-size: 44px;
+            font-weight: bold;
+            font-family: 'Oswald', sans-serif;
+            line-height: 65px;
+        }
+
+        .sectionTitle3 p {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        /*magazine img,cardbox*/
+        .cardBox {
+            margin: auto;
+            width: 985px;
+            height: 445px;
+            margin-top: 20px;
+            margin-bottom: 180px;
+        }
+
+        .card>img {
+            float: left;
+        }
+
+        .card>div {
+            float: left;
+        }
+
+        .card>p {
+            float: left;
+        }
+
+        .grayBox {
+            width: 540px;
+            height: 400px;
+            background-color: #F0F0F0;
+            border-radius: 0 1000px 1000px 0;
+            position: absolute;
+            right: 0;
+            top: 22px;
+            padding: 65px 125px 65px 50px;
+            z-index: -1;
+        }
+
+        .grayBox a {
+            color: #333;
+            display: block;
+        }
+
+        .title {
+            width: 326px;
+            height: 56px;
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 16px 20px;
+            margin-bottom: 10px;
+        }
+
+        .contentText {
+            line-height: 22px;
+            width: 326px;
+            height: 204px;
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: #fff;
+            padding: 20px;
+        }
+
+        #magazine .bx-wrapper {
+            position: relative;
+        }
+
+        #magazine .bx-wrapper img {
+            width: 445px;
+            height: 445px;
+            display: block;
+            transition: 0.6s;
+            cursor: pointer;
+            transform-origin: center;
+        }
+
+        #magazine .bx-wrapper img:first-child:hover {
+            transform: scale(1.05);
+            opacity: 0.8;
+        }
+
+        #magazine .bxslider {
+            margin: 0;
+            padding: 0;
+        }
+
+        /*magazine pager*/
+        #magazine .bx-wrapper .bx-pager {
+            font-family: 'Oswald', sans-serif;
+            border: 2px solid black;
+            border-radius: 0 0 5px 5px;
+            width: 326px;
+            height: 40px;
+            padding: 10px 0 0 20px;
+            font-weight: bold;
+            position: absolute;
+            right: 164px;
+            bottom: 88px;
+            z-index: 99;
+        }
+
+        #magazine .bx-wrapper .bx-pager.bx-default-pager a {
+            text-indent: -9999px;
+            display: block;
+            width: 10px;
+            height: 10px;
+            margin: 0 5px;
+            outline: 0;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+        }
+
+        #magazine .bx-wrapper .bx-pager-item,
+        #magazine .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+            display: inline-block;
+            vertical-align: bottom;
+            *zoom: 1;
+            *display: inline;
+        }
+
+        #magazine .bx-wrapper .bx-pager-item {
+            font-size: 0;
+            line-height: 0;
+        }
+
+        #magazine .bx-wrapper .bx-pager.bx-default-pager a:hover,
+        #magazine .bx-wrapper .bx-pager.bx-default-pager a.active,
+        #magazine .bx-wrapper .bx-pager.bx-default-pager a:focus {
+            background: #000;
+        }
+
+
+        /* magazine controls (NEXT / PREV) */
+        #magazine .bx-wrapper .bx-prev {
+            left: 10px;
+            background-image: url('./images/leftBtn.png');
+            background-size: cover;
+            transition: 0.6s;
+            position: absolute;
+            top: 210px;
+            left: -130px;
+        }
+
+        #magazine .bx-wrapper .bx-prev::before {
+            content: '';
+            position: absolute;
+            top: 26px;
+            right: 52px;
+            width: 285px;
+            height: 2px;
+            background: black;
+        }
+
+        #magazine .bx-wrapper .bx-prev:hover {
+            background: url('./images/leftBalckBtn.png') no-repeat;
+            background-size: 100% auto;
+        }
+
+        #magazine .bx-wrapper .bx-next {
+            right: 10px;
+            background-image: url('./images/rightBtn.png');
+            background-size: cover;
+            transition: 0.6s;
+            position: absolute;
+            top: 210px;
+            right: -130px;
+        }
+
+        #magazine .bx-wrapper .bx-next::before {
+            content: '';
+            position: absolute;
+            top: 26px;
+            left: 52px;
+            width: 285px;
+            height: 2px;
+            background: black;
+        }
+
+        #magazine .bx-wrapper .bx-next:hover {
+            background: url('./images/rightBlackBtn.png') no-repeat;
+            background-size: 100% auto;
+        }
+
+        /*컨트롤러 위치잡는거, 가장 중요함*/
+        #magazine .bx-wrapper .bx-controls-direction a {
+            position: absolute;
+            top: 50%;
+            outline: 0;
+            width: 52px;
+            height: 52px;
+            text-indent: -9999px;
+            z-index: 9999;
+        }
+
+        #magazine .bx-wrapper .bx-controls-direction a.disabled {
+            display: none;
+        }
+
+
+        /*footer*/
+        footer {
+            height: 240px;
+            width: 100%;
+            background-color: black;
+            position: relative;
+            padding: 40px 165px;
+            color: #fff;
+        }
+
+        .footerText {
+            width: 178px;
+            height: 90px;
+        }
+
+        .footerText h4 {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .footerText p {
+            line-height: 20px;
+            font-size: 12px;
+        }
+
+        .footerNav {
+            display: flex;
+            position: absolute;
+            right: 165px;
+            top: 40px;
+        }
+
+        .footerNav li {
+            margin-right: 20px;
+        }
+
+        .footerNav li:last-child {
+            margin-right: 0;
+        }
+
+        .footerNav li:hover {
+            opacity: 0.5;
+            transition: 0.3s;
+        }
+
+        .footerNav a {
+            display: block;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+        }
+
+        .footerSns {
+            width: 150px;
+            display: flex;
+            position: absolute;
+            right: 165px;
+            top: 116px;
+        }
+
+        .footerSns li {
+            margin-right: 10px;
+        }
+
+        .footerSns li:last-child {
+            margin-right: 0;
+        }
+
+        .footerSns a {
+            display: block;
+        }
+
+        .footerSns img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .footerLine {
+            display: block;
+            width: 100%;
+            margin: auto;
+            background-color: #fff;
+            height: 2px;
+            margin-top: 40px;
+        }
+
+        .footerBottom {
+            width: 100%;
+            height: 12px;
+            margin: auto;
+            margin-top: 20px;
+            display: flex;
+            font-size: 10px;
+        }
+
+        .footerBottom span {
+            opacity: 0.5;
+            position: absolute;
+            right: 165px;
+        }
+
+
+        .topBtn {
+            width: 116px;
+            height: 116px;
+            background-color: black;
+            border: 2px solid #fff;
+            border-radius: 116px;
+            padding: 26px;
+            position: absolute;
+            top: -80px;
+            right: -10px;
+            transition: 0.4s ease-out;
+            cursor: pointer;
+        }
+
+        .topBtnText {
+            width: 50px;
+            height: 67px;
+            margin: auto;
+        }
+
+        .topBtnText p {
+            font-size: 12px;
+            font-weight: 500;
+            color: #fff;
+            margin-bottom: 10px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .topImg {
+            overflow: hidden;
+        }
+
+        .topImg img {
+            width: 12px;
+            height: 42px;
+            animation: goTop 1.2s ease-out infinite;
+        }
+
+        .topBtn:hover {
+            background-color: #fff;
+            border: 2px solid black;
+            transform: scale(1.2);
+        }
+
+        .topBtn:hover .topBtnText p {
+            color: black;
+        }
+
+        .topBtn:hover .topImg img {
+            filter: brightness(0);
+        }
+
+        @keyframes goTop {
+            0% {
+                transform: translateY(44px);
+                ;
+            }
+
+            100% {
+                transform: translateY(-44px);
+                ;
+            }
+        }
+
+
+        .box {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .wrapper {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/jquery.bxslider.min.js"></script>
+    <script src="./slick/slick.min.js"></script>
+
+    <script>
+        $(function () {
+            /* 
+                  var $btnNum=0;
+                  $("#magazine .bx-wrapper .bx-prev").on('click',function(e){
+                      e.preventDefault();
+                      if($btnNum<=0) return false;
+                      $btnNum--;
+                      
+                      $(".contentText").removeClass("on");
+                      $(".contentText").eq($btnNum).addClass("on"); 
+                   
+                  });
+                  $("#magazine .bx-wrapper .bx-next").on('click',function(e){
+                      e.preventDefault();
+                      if($btnNum>=8) return false;
+                      $btnNum++;
+      
+                      $(".contentText").removeClass("on");
+                      $(".contentText").eq($btnNum).addClass("on");
+                      
+                  });
+                */
+
+
+            // mainBanner bxslider
+            $('.slider').bxSlider({
+                mode: 'fade',
+                pager: 'false',
+                controls: 'false',
+                auto: 'true',
+                pause: '7000',
+                infiniteLoop: 'true',
+                easing: 'ease-out',
+            });
+
+
+            // moreBtn 메인배너
+            $('.moreBtn').hover(function () {
+                $('.moreBtn img').css('animation-play-state', 'paused')
+            }
+                , function () {
+                    $('.moreBtn img').css('animation-play-state', 'running');
+                });
+
+            // videoMoreBtn 비디오버튼
+            $('.videoMoreBtn').hover(function () {
+                $('.videoMoreBtnBg img').css('animation-play-state', 'paused')
+            }
+                , function () {
+                    $('.videoMoreBtnBg img').css('animation-play-state', 'running');
+                });
+
+
+            // hamburgeOpen 메뉴
+            var toggle = true; //닫힌상태
+            $('.hamburgerIcon').click(function () {
+                $(this).toggleClass('active', 1000, 'easeOutBounce');
+                $('.menuWrapper').toggleClass('active');
+
+                if ($('.hamburgerOpen').hasClass('active')) {
+                    $('.hamburgerOpen').removeClass('active');
+                    $('.menuWrapper').css({ 'opacity': '0', 'display': 'none' })
+
+                } else {
+                    $('.hamburgerOpen').addClass('active');
+                    $('.menuWrapper').css({ 'opacity': '1', 'display': 'block' })
+                }
+
+            });
+
+
+            // indicator1 프로그래스바
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 900) {
+                    $('.indicatorLine1').addClass('active');
+                } else {
+                    $('.indicatorLine1').removeClass('active');
+                }
+            })
+            // indicator2 프로그래스바
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 2900) {
+                    $('.indicatorLine2').addClass('active');
+                } else {
+                    $('.indicatorLine2').removeClass('active');
+                    $('.indicatorLine1').addClass('active');
+                }
+            })
+
+            // indicator3 프로그래스바
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 4800) {
+                    $('.indicatorLine3').addClass('active');
+                } else {
+                    $('.indicatorLine3').removeClass('active');
+                    $('.indicatorLine2').addClass('active');
+                }
+            })
+
+            // indicator4 프로그래스바
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 6600) {
+                    $('.indicatorLine4').addClass('active');
+                } else {
+                    $('.indicatorLine4').removeClass('active');
+                    $('.indicatorLine3').addClass('active');
+                }
+            })
+
+            // indicator 버튼이동
+            $(document).ready(function () {
+                $(".redDownBtn a, .yellowUpBtn a, .yellowDownBtn a, .turquoiseUpBtn a, .turquoiseDownBtn a, .darkUpBtn a").on('click', function (event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                    }, 600, function () {
+                    window.location.hash = hash;
+                    });
+                }
+                });
+            });
+
+
+            // red
+            // section hover 제품이미지 나왔다 없어졌다
+            // section cursor 제품이미지 따라다니기
+            $('.redProduct li').mouseover(function (e) {
+
+                var n = $(this).index();
+                console.log(n)
+
+                $('.redProductImg img').hide();
+                $('.redProductImg img').eq(n).show();
+
+                var mouseX = e.pageX - 110;
+                var mouseY = e.pageY - 110;
+
+                $('.redProductImg').show().css({
+                    left: mouseX + 'px',
+                    top: mouseY + 'px',
+
+                }, 10, 'linear');
+            });
+
+            // yellow
+            $('.yellowProduct li').mouseover(function (e) {
+
+                var n = $(this).index();
+                console.log(n)
+
+                $('.yellowProductImg img').hide();
+                $('.yellowProductImg img').eq(n).show();
+
+                var mouseX = e.pageX - 110;
+                var mouseY = e.pageY - 110;
+
+                $('.yellowProductImg').show().css({
+                    left: mouseX + 'px',
+                    top: mouseY + 'px',
+
+                }, 10, 'linear');
+            });
+
+            // turquoise
+            $('.turquoiseProduct li').mouseover(function (e) {
+
+                var n = $(this).index();
+                console.log(n)
+
+                $('.turquoiseProductImg img').hide();
+                $('.turquoiseProductImg img').eq(n).show();
+
+                var mouseX = e.pageX - 110;
+                var mouseY = e.pageY - 110;
+
+                $('.turquoiseProductImg').show().css({
+                    left: mouseX + 'px',
+                    top: mouseY + 'px',
+
+                }, 10, 'linear');
+            });
+
+            // dark
+            $('.darkProduct li').mouseover(function (e) {
+
+                var n = $(this).index();
+                console.log(n)
+
+                $('.darkProductImg img').hide();
+                $('.darkProductImg img').eq(n).show();
+
+                var mouseX = e.pageX - 110;
+                var mouseY = e.pageY - 110;
+
+                $('.darkProductImg').show().css({
+                    left: mouseX + 'px',
+                    top: mouseY + 'px',
+
+                }, 10, 'linear');
+            });
+
+
+            // magazine bxslider
+            $('.imgBox').bxSlider({
+                mode: 'fade',
+                minSlides: 1,
+                maxSlides: 1,
+                moveSlides: 1,
+                pagerType: 'short',
+                pause: 4500,
+                auto: 'true'
+            });
+
+
+            // topBtn 버튼
+            $('.topBtn').click(function () {
+                $('html, body').animate({ 'scrollTop': 0 }, 1000);
+            })
+        })
+
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!--hamburgerOpen-->
+        <nav class="hamburgerOpen clearfix">
+            <div class="menuWrapper">
+                <ul class="hamburgerMenu">
+                    <li><a href="#">LOGIN</a></li>
+                    <li><a href="#">CART</a></li>
+                    <li><a href="#">MY ORDER</a></li>
+                    <li><a href="#">MY SHOPPING</a></li>
+                </ul>
+                <ul class="latelyProduct">
+                    <li>LATELY PRODUCT</li>
+                    <li>
+                        <div>
+                            <a
+                                href="https://crowcanyon.co.kr/product/detail.html?product_no=3746&cate_no=384&display_group=1"><img
+                                    src="./images/leftArrow.png" alt=""></a>
+                            <a
+                                href="https://crowcanyon.co.kr/product/detail.html?product_no=3746&cate_no=384&display_group=1"><img
+                                    src="./images/product1.png" alt=""></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a
+                                href="https://crowcanyon.co.kr/product/d11-%EB%A8%B8%EA%B7%B8-%ED%8D%BC%ED%94%8C%EB%A7%88%EB%B8%94/3617/category/310/display/1/"><img
+                                    src="./images/leftArrow.png" alt=""></a>
+                            <a
+                                href="https://crowcanyon.co.kr/product/d11-%EB%A8%B8%EA%B7%B8-%ED%8D%BC%ED%94%8C%EB%A7%88%EB%B8%94/3617/category/310/display/1/"><img
+                                    src="./images/product2.png" alt=""></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a
+                                href="https://crowcanyon.co.kr/product/d17-%EC%8B%9C%EB%A6%AC%EC%96%BC%EB%B3%B4%EC%9A%B8-%EC%98%90%EB%A1%9C%EC%9A%B0%EB%A7%88%EB%B8%94/2955/category/364/display/1/"><img
+                                    src="./images/leftArrow.png" alt=""></a>
+                            <a
+                                href="https://crowcanyon.co.kr/product/d17-%EC%8B%9C%EB%A6%AC%EC%96%BC%EB%B3%B4%EC%9A%B8-%EC%98%90%EB%A1%9C%EC%9A%B0%EB%A7%88%EB%B8%94/2955/category/364/display/1/"><img
+                                    src="./images/product3.png" alt=""></a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="sns">
+                    <li><a href="#"><img src="./images/insta.png" alt=""></a></li>
+                    <li><a href="#"><img src="./images/facebook.png" alt=""></a></li>
+                    <li><a href="#"><img src="./images/youtube.png" alt=""></a></li>
+                    <li><a href="#"><img src="./images/blog.png" alt=""></a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="blackBg"></div>
+
+
+        <!--header-->
+        <header id="header clearfix">
+            <div class="headerLeft">
+                <div class="header-logo">
+                    <h1>crowcanyon</h1>
+                    <a class="logo" href="#"><img src="./images/logo.png" alt=""></a>
+                </div>
+                <span class="headerLine"></span>
+            </div>
+            <nav class="gnb">
+                <ul>
+                    <li class="list"><a href="#">ABOUT</a>
+                        <ul class="gnbSubMenu">
+                            <li><a href="#">STORY</a></li>
+                            <li><a href="#">COMPANY</a></li>
+                            <li><a href="#">CONTACT</a></li>
+                            <li><a href="#">STOCKIST</a></li>
+                        </ul>
+                    </li>
+                    <li class="list"><a href="#">STORE</a>
+                        <ul class="gnbSubMenu">
+                            <li><a href="#">에코픽셀</a></li>
+                            <li><a href="#">크로우캐년X뉴발란스</a></li>
+                            <li><a href="#">컵</a></li>
+                            <li><a href="#">플레이트</a></li>
+                            <li><a href="#">보울</a></li>
+                            <li><a href="#">키친웨어</a></li>
+                            <li><a href="#">굿즈</a></li>
+                            <li><a href="#">본 에나멜웨어</a></li>
+                        </ul>
+                    </li>
+                    <li class="list"><a href="#">JOURNAL</a>
+                        <ul class="gnbSubMenu">
+                            <li><a href="">MAGAZINE</a></li>
+                        </ul>
+                    </li>
+                    <li class="list"><a href="#">COMMUNITY</a>
+                        <ul class="gnbSubMenu">
+                            <li><a href="#">NOTICE</a></li>
+                            <li><a href="#">Q&A</a></li>
+                            <li><a href="#">REVIEW</a></li>
+                            <li><a href="#">SNS</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">WHOLESALE</a>
+                    </li>
+                    <div class="gnb2">
+                        <li class="search">
+                            <a href="#">
+                                <img src="./images/search.png" alt="">
+                                <input type="text" name="search" placeholder="SEARCH">
+                                <button type="submit" class="btn btn-search fa fa-search"></button>
+                            </a>
+                        </li>
+                        <li><a href="#" class="cart"><img src="./images/cart.png" alt=""></a></li>
+                    </div>
+
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <div class="hamburgerIcon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <span class="headerUnderLine"></span>
+        </header>
+
+
+        <!--slideLine-->
+        <section class="slideLineBox">
+            <div class="slideLine1"></div>
+            <div class="arya stark">
+                <div class="sheet center middle">
+                    <div class="tile" style="transform:none;">
+                        <div class="copy center black" style="width: 1440px !important;">
+                            <!--         <marquee behavior="scroll" direction="left">
+                        <h1 style="font-size: 100px;">STRONG. DURABLE. BUILT TO LAST.</h1>
+                      </marquee>
+               -->
+                            <div class="marquee">
+                                <div>
+                                    <span>
+                                        &nbsp &nbsp
+                                        Made For Generations SINCE 1977 &nbsp &nbsp &nbsp∙
+                                        &nbsp &nbsp &nbsp
+                                        Enamel ware. USA, Sanfrancisco &nbsp &nbsp &nbsp∙
+                                        &nbsp &nbsp &nbsp
+                                        Made For Generations SINCE 1977 &nbsp &nbsp &nbsp∙
+                                        &nbsp &nbsp &nbsp
+                                        Enamel ware. USA, Sanfrancisco &nbsp &nbsp &nbsp∙
+
+                                    </span>
+                                    <span>
+                                        &nbsp &nbsp
+                                        Made For Generations SINCE 1977 &nbsp &nbsp &nbsp∙
+                                        &nbsp &nbsp &nbsp
+                                        Enamel ware. USA, Sanfrancisco &nbsp &nbsp &nbsp∙
+                                        &nbsp &nbsp &nbsp
+                                        Made For Generations SINCE 1977 &nbsp &nbsp &nbsp∙
+                                        &nbsp &nbsp &nbsp
+                                        Enamel ware. USA, Sanfrancisco &nbsp &nbsp &nbsp∙
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slideLine2"></div>
+        </section>
+
+
+        <!--mainBanner-->
+        <div id="mainBanner">
+            <div class="slider">
+                <div>
+                    <div class="sliderBg1">
+                        <img src="./images/mainBg1.png" alt="">
+                        <div></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="sliderBg2">
+                        <img src="./images/mainBg2.png" alt="">
+                        <div></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="sliderBg3">
+                        <img src="./images/mainBg3.png" alt="">
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="mainText">
+                <h2>
+                    Next.
+                    <br>
+                    <div class="mainTextImg">
+                        <img src="./images/marbleLineText.png" alt="">
+                    </div>
+                </h2>
+                <p>7월 28일, 크로우캐년홈에서 마블라인 신제품이 출시됩니다.<br>
+                    크로우캐년 공식 온라인스토어, 크로우캐년홈 망원동 쇼룸에서 판매합니다.
+                </p>
+            </div>
+
+            <div class="moreBtn">
+                <img src="./images/roundText1.png" alt="">
+                <p>미리보기</p>
+            </div>
+
+            <div class="scrollBtn">
+                <div class="scrollBtnText">
+                    <p>SCROLL</p>
+                    <div class="scrollImg">
+                        <img src="./images/lightScrollArrow.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <!--sectionTitle1-->
+        <div class="sectionTitle1">
+            <h3>PRODUCT</h3>
+            <p>크로우캐년홈의 마블라인 상품</p>
+        </div>
+
+
+
+        <!--section1-->
+        <div class="box">
+            <section id="red">
+                <span>Red Marble</span>
+                <img src="./images/leftLightRound.png" alt="" class="redImg1">
+                <img src="./images/redMainImg.png" alt="" class="redImg2">
+
+                <ul class="indicatorBtn1">
+                    <li class="redUpBtn">
+                        <a href=#><img src="./images/upBtn.png" alt=""></a>
+                    </li>
+                    <li class="redDownBtn">
+                        <a href="#yellowAside"><img src="./images/downBtn.png" alt=""></a>
+                        <p>02</p>
+                    </li>
+                </ul>
+
+                <div class="indicator1">
+                    <div class="indicatorLineBg1">
+                        <div class="indicatorLine1"></div>
+                    </div>
+                </div>
+            </section>
+
+
+            <aside id="redAside">
+                <div class="redTitle">
+                    <h3>01<span></span></h3>
+                    <p>레드마블</p>
+                </div>
+                <div class="topText1">
+                    <span></span>
+                    <p>
+                        화려한 패턴과 강렬한 레드컬러가 테이블에 활력을 주고<br>
+                        빈티지한 멋까지 어우러져 식탁에 포인트가 될 수 있게 해줍니다.
+                    </p>
+                    <button>
+                        <a href="#">
+                            MORE
+                            <img src="./images/plusBtn.png" alt="">
+                        </a>
+                    </button>
+                </div>
+                <ul class="redProduct">
+                    <li>
+                        <a href="#">
+                            <span></span>
+                            <div>
+                                <h4>D03 <br>
+                                    쇼트텀블러 레드마블</h4>
+                                <p>￦18,000&nbsp&nbsp&nbsp |&nbsp&nbsp&nbsp 컵/텀블러</p>
+                            </div>
+                            <div><img src="./images/rightArrow.png" alt="" class="redArrow"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span></span>
+                            <div>
+                                <h4>D93 <br>
+                                    텀블러 레드마블</h4>
+                                <p>￦21,000&nbsp&nbsp&nbsp |&nbsp&nbsp&nbsp 컵/텀블러</p>
+                            </div>
+                            <div><img src="./images/rightArrow.png" alt="" class="redArrow"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span></span>
+                            <div>
+                                <h4>D99 <br>
+                                    플랫플레이트 레드마블</h4>
+                                <p>￦19,000&nbsp&nbsp&nbsp |&nbsp&nbsp&nbsp 플레이트</p>
+                            </div>
+                            <div><img src="./images/rightArrow.png" alt="" class="redArrow"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span></span>
+                            <div>
+                                <h4>D20 <br>
+                                    디너플레이트 레드마블</h4>
+                                <p>￦24,000&nbsp&nbsp&nbsp |&nbsp&nbsp&nbsp 플레이트</p>
+                            </div>
+                            <div><img src="./images/rightArrow.png" alt="" class="redArrow"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span></span>
+                            <div>
+                                <h4>D18 <br>
+                                    샐러드보울 레드마블</h4>
+                                <p>￦25,000&nbsp&nbsp&nbsp |&nbsp&nbsp&nbsp 보울</p>
+                            </div>
+                            <div><img src="./images/rightArrow.png" alt="" class="redArrow"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span></span>
+                            <div>
+                                <h4>D22 <br>
+                                    오픈로스터 레드마블</h4>
+                                <p>￦39,000&nbsp&nbsp&nbsp |&nbsp&nbsp&nbsp 키친웨어</p>
+                            </div>
+                            <div><img src="./images/rightArrow.png" alt="" class="redArrow"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span></span>
+                            <div>
+                                <h4>D49 <br>
+                                    스몰스푼 레드마블</h4>
+                                <p>￦9,000&nbsp&nbsp&nbsp |&nbsp&nbsp&nbsp 키친웨어</p>
+                            </div>
+                            <div><img src="./images/rightArrow.png" alt="" class="redArrow"></div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="redProductImg">
+                    <ul>
+                        <li><img src="./images/redProduct1.png" alt="" class="redImg"></li>
+                        <li><img src="./images/redProduct2.png" alt="" class="redImg"></li>
+                        <li><img src="./images/redProduct3.png" alt="" class="redImg"></li>
+                        <li><img src="./images/redProduct4.png" alt="" class="redImg"></li>
+                        <li><img src="./images/redProduct5.png" alt="" class="redImg"></li>
+                        <li><img src="./images/redProduct6.png" alt="" class="redImg"></li>
+                        <li><img src="./images/redProduct7.png" alt="" class="redImg"></li>
+                    </ul>
+
+                </div>
+            </aside>
+
+        </div>
+
+
+        <!--section2-->
+        <div class="box">
+            <aside id="yellowAside">
+                <div class="yellowTitle">
+                    <h3>02<span></span></h3>
+                    <p>옐로우마블</p>
+                </div>
+                <div class="topText2">
+                    <span></span>
+                    <p>
+                        한국에서만 나온 옐로우 컬러의 마블 에나멜 웨어입니다.<br>
+                        일상속, 마블 아이템으로 매일을 특별하게 만들어보는건 어떠신가요?
+                    </p>
+                    <button>
+                        <a href="#">
+                            MORE
+                            <img src="./images/plusBtn.png" alt="">
+                        </a>
+                    </button>
+                </div>
+                <ul class="yellowProduct">
+                    <li>
+                        <a href="#">
+                            <span></span>
+                            <div>
+                                <h4>크로우캐년 X 뉴발란스<br>
+                                    슬라이드 옐로우마블</h4>
+                                <div class="newTag">NEW</div>
+                                <p>￦49,000&nbsp&nbsp&nbsp |&nbsp&nbsp&nbsp크로우캐년X뉴발란스</p>
+                            </div>
+                            <div><img src="./images/rightArrow.png" alt="" class="yellowArrow"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span></span>
+                            <div>
+                                <h4>D93 <br>
+                                    텀블러 옐로우마블</h4>
+                                <p>￦21,000&nbsp&nbsp&nbsp |&nbsp&nbsp&nbsp컵/텀블러</p>
+                            </div>
+                            <div><img src="./images/rightArrow.png" alt="" class="yellowArrow"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span></span>
+                            <div>
+                                <h4>D11 <br>
+                                    머그 옐로우마블</h4>
+                                <p>￦19,000&nbsp&nbsp&nbsp |&nbsp&nbsp&nbsp 컵/텀블러</p>
+                            </div>
+                            <div><img src="./images/rightArrow.png" alt="" class="yellowArrow"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span></span>
+                            <div>
+                                <h4>D99 <br>
+                                    플랫플레이트 옐로우마블</h4>
+                                <p>￦19,000&nbsp&nbsp&nbsp |&nbsp&nbsp&nbsp 플레이트</p>
+                            </div>
+                            <div><img src="./images/rightArrow.png" alt="" class="yellowArrow"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span></span>
+                            <div>
+                                <h4>D17 <br>
+                                    시리얼보울 옐로우마블</h4>
+                                <p>￦21,000&nbsp&nbsp&nbsp |&nbsp&nbsp&nbsp 보울</p>
+                            </div>
+                            <div><img src="./images/rightArrow.png" alt="" class="yellowArrow"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span></span>
+                            <div>
+                                <h4>D02 <br>
+                                    요거트보울 옐로우마블</h4>
+                                <p>￦18,000&nbsp&nbsp&nbsp |&nbsp&nbsp&nbsp 보울</p>
+                            </div>
+                            <div><img src="./images/rightArrow.png" alt="" class="yellowArrow"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span></span>
+                            <div>
+                                <h4>크로우캐년홈 <br>
+                                    에어팟케이스 옐로우마블</h4>
+                                <p>￦19,000&nbsp&nbsp&nbsp |&nbsp&nbsp&nbsp 굿즈</p>
+                            </div>
+                            <div><img src="./images/rightArrow.png" alt="" class="yellowArrow"></div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="yellowProductImg">
+                    <ul>
+                        <li><img src="./images/yellowProduct1.png" alt="" class="yellowImg"></li>
+                        <li><img src="./images/yellowProduct2.png" alt="" class="yellowImg"></li>
+                        <li><img src="./images/yellowProduct3.png" alt="" class="yellowImg"></li>
+                        <li><img src="./images/yellowProduct4.png" alt="" class="yellowImg"></li>
+                        <li><img src="./images/yellowProduct5.png" alt="" class="yellowImg"></li>
+                        <li><img src="./images/yellowProduct6.png" alt="" class="yellowImg"></li>
+                        <li><img src="./images/yellowProduct7.png" alt="" class="yellowImg"></li>
+                    </ul>
+                </div>
+            </aside>
+            <section id="yellow">
+                <span>Yellow Marble</span>
+                <img src="./images/rightBlackLightRound.png" alt="" class="yellowImg1">
+                <img src="./images/yellowMainImg.png" alt="" class="yellowImg2">
+
+                <ul class="indicatorBtn2">
+                    <li class="yellowUpBtn">
+                        <p>01</p>
+                        <a href=#redAside><img src="./images/upBlackBtn.png" alt=""></a>
+                    </li>
+                    <li class="yellowDownBtn">
+                        <a href="#turquoiseAside"><img src="./images/downBlackBtn.png" alt=""></a>
+                        <p>03</p>
+                    </li>
+                </ul>
+
+                <div class="indicator2">
+                    <div class="indicatorLineBg2">
+                        <div class="indicatorLine2"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+        <!--section3-->
+        <div class="box">
+            <section id="turquoise">
+                <span>Turquoise Marble</span>
+                <img src="./images/leftLightRound.png" alt="" class="turquoiseImg1">
+                <img src="./images/turquoiseMainImg.png" alt="" class="turquoiseImg2">
+
+                <ul class="indicatorBtn3">
+                    <li class="turquoiseUpBtn">
+                        <p>02</p>
+                        <a href="#yellowAside"><img src="./images/upBtn.png" alt=""></a>
+                    </li>
+                    <li class="turquoiseDownBtn">
+                        <a href="#darkAside"><img src="./images/downBtn.png" alt=""></a>
+                        <p>04</p>
+                    </li>
+                </ul>
+
+                <div class="indicator3">
+                    <div class="indicatorLineBg3">
+                        <div class="indicatorLine3"></div>
+                    </div>
+                </div>
+            </section>
+            <aside id="turquoiseAside">
+                <div class="redTitle">
+                    <h3>03<span></span></h3>
+                    <p>터키마블</p>
+                </div>
+                <div class="topText3">
+                    <span></span>
+                    <p>
+                        청량하고 보고 있기만해도 시원해지는 터키컬러이며<br>
+                        요즘 날씨에도 정말 잘 어울리고 호불호 없이 누구나 좋아하는 제품입니다.
+                    </p>
+                    <button>
+                        <a href="#">
+                            MORE
+                            <img src="./images/plusBtn.png" alt="">
+                        </a>
+                    </button>
+                </div>
+                <ul class="turquoiseProduct">
+                    <li>
+                        <a href="#">
+                            <span></span>
+                            <div>
+                                <h4>D03 <br>
+                                    쇼트텀블러 터키마블</h4>
+                                <p>￦18,000&nbsp&nbsp&nbsp |&nbsp&nbsp&nbsp 컵/텀블러</p>
+                            </div>
+                            <div><img src="./images/rightArrow.png" alt="" class="turquoiseArrow"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span></span>
+                            <div>
+                                <h4>D93 <br>
+                                    텀블러 터키마블</h4>
+                                <p>￦21,000&nbsp&nbsp&nbsp |&nbsp&nbsp&nbsp 컵/텀블러</p>
+                            </div>
+                            <div><img src="./images/rightArrow.png" alt="" class="turquoiseArrow"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span></span>
+                            <div>
+                                <h4>D20 <br>
+                                    머그 터키마블</h4>
+                                <p>￦19,000&nbsp&nbsp&nbsp |&nbsp&nbsp&nbsp 컵/텀블러</p>
+                            </div>
+                            <div><img src="./images/rightArrow.png" alt="" class="turquoiseArrow"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span></span>
+                            <div>
+                                <h4>D11 <br>
+                                    디너플레이트 터키마블</h4>
+                                <p>￦24,000&nbsp&nbsp&nbsp |&nbsp&nbsp&nbsp 플레이트</p>
+                            </div>
+                            <div><img src="./images/rightArrow.png" alt="" class="turquoiseArrow"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span></span>
+                            <div>
+                                <h4>D14 <br>
+                                    시리얼보울 터키마블</h4>
+                                <p>￦21,000&nbsp&nbsp&nbsp |&nbsp&nbsp&nbsp 보울</p>
+                            </div>
+                            <div><img src="./images/rightArrow.png" alt="" class="turquoiseArrow"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span></span>
+                            <div>
+                                <h4>D02 <br>
+                                    요거트보울 터키마블</h4>
+                                <p>￦18,000&nbsp&nbsp&nbsp |&nbsp&nbsp&nbsp 보울</p>
+                            </div>
+                            <div><img src="./images/rightArrow.png" alt="" class="turquoiseArrow"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span></span>
+                            <div>
+                                <h4>D62 <br>
+                                    콜랜더 터키마블</h4>
+                                <p>￦41,000&nbsp&nbsp&nbsp |&nbsp&nbsp&nbsp 키친웨어</p>
+                            </div>
+                            <div><img src="./images/rightArrow.png" alt="" class="turquoiseArrow"></div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="turquoiseProductImg">
+                    <ul>
+                        <li><img src="./images/turquoiseProduct1.png" alt="" class="turquoiseImg"></li>
+                        <li><img src="./images/turquoiseProduct2.png" alt="" class="turquoiseImg"></li>
+                        <li><img src="./images/turquoiseProduct3.png" alt="" class="turquoiseImg"></li>
+                        <li><img src="./images/turquoiseProduct4.png" alt="" class="turquoiseImg"></li>
+                        <li><img src="./images/turquoiseProduct5.png" alt="" class="turquoiseImg"></li>
+                        <li><img src="./images/turquoiseProduct6.png" alt="" class="turquoiseImg"></li>
+                        <li><img src="./images/turquoiseProduct7.png" alt="" class="turquoiseImg"></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+
+
+
+        <!--section4-->
+        <div class="box">
+            <aside id="darkAside">
+                <div class="darkTitle">
+                    <h3>04<span></span></h3>
+                    <p>블랙마블</p>
+                </div>
+                <div class="topText4">
+                    <span></span>
+                    <p>
+                        클래식한 블랙컬러는 매일 사용하기 좋아 실용성이 높습니다.<br>
+                        소장가치 100%, 세상에 하나뿐인 나만의 아이템을 소장해보세요.
+                    </p>
+                    <button>
+                        <a href="#">
+                            MORE
+                            <img src="./images/plusBtn.png" alt="">
+                        </a>
+                    </button>
+                </div>
+                <ul class="darkProduct">
+                    <li>
+                        <a href="#">
+                            <span></span>
+                            <div>
+                                <h4>크로우캐년 X 뉴발란스 <br>
+                                    슬라이드 블랙마블</h4>
+                                <div class="newTag">NEW</div>
+                                <p>￦49,000&nbsp&nbsp&nbsp |&nbsp&nbsp&nbsp 크로우캐년X뉴발란스</p>
+                            </div>
+                            <div><img src="./images/rightArrow.png" alt="" class="darkArrow"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span></span>
+                            <div>
+                                <h4>D03 <br>
+                                    쇼트텀블러 블랙마블</h4>
+                                <p>￦18,000&nbsp&nbsp&nbsp |&nbsp&nbsp&nbsp 컵/텀블러</p>
+                            </div>
+                            <div><img src="./images/rightArrow.png" alt="" class="darkArrow"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span></span>
+                            <div>
+                                <h4>D99 <br>
+                                    플랫플레이트 블랙마블</h4>
+                                <p>￦19,000&nbsp&nbsp&nbsp |&nbsp&nbsp&nbsp 플레이트</p>
+                            </div>
+                            <div><img src="./images/rightArrow.png" alt="" class="darkArrow"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span></span>
+                            <div>
+                                <h4>D17 <br>
+                                    시리얼보울 블랙마블</h4>
+                                <p>￦21,000&nbsp&nbsp&nbsp |&nbsp&nbsp&nbsp 보울</p>
+                            </div>
+                            <div><img src="./images/rightArrow.png" alt="" class="darkArrow"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span></span>
+                            <div>
+                                <h4>D02 <br>
+                                    요거트보울 블랙마블</h4>
+                                <p>￦18,000&nbsp&nbsp&nbsp |&nbsp&nbsp&nbsp 보울</p>
+                            </div>
+                            <div><img src="./images/rightArrow.png" alt="" class="darkArrow"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span></span>
+                            <div>
+                                <h4>D49 <br>
+                                    스몰스푼 블랙마블</h4>
+                                <p>￦9,000&nbsp&nbsp&nbsp |&nbsp&nbsp&nbsp 키친웨어</p>
+                            </div>
+                            <div><img src="./images/rightArrow.png" alt="" class="darkArrow"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span></span>
+                            <div>
+                                <h4>크로우캐년홈 <br>
+                                    핸드폰케이스 블랙마블(유광)</h4>
+                                <p>￦24,000&nbsp&nbsp&nbsp |&nbsp&nbsp&nbsp 굿즈</p>
+                            </div>
+                            <div><img src="./images/rightArrow.png" alt="" class="darkArrow"></div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="darkProductImg">
+                    <ul>
+                        <li><img src="./images/darkProduct1.png" alt="" class="darkImg"></li>
+                        <li><img src="./images/darkProduct2.png" alt="" class="darkImg"></li>
+                        <li><img src="./images/darkProduct3.png" alt="" class="darkImg"></li>
+                        <li><img src="./images/darkProduct4.png" alt="" class="darkImg"></li>
+                        <li><img src="./images/darkProduct5.png" alt="" class="darkImg"></li>
+                        <li><img src="./images/darkProduct6.png" alt="" class="darkImg"></li>
+                        <li><img src="./images/darkProduct7.png" alt="" class="darkImg"></li>
+                    </ul>
+                </div>
+            </aside>
+            <section id="dark">
+                <span>Black Marble</span>
+                <img src="./images/rightLightRound.png" alt="" class="darkImg1">
+                <img src="./images/darkMainImg.png" alt="" class="darkImg2">
+
+                <ul class="indicatorBtn4">
+                    <li class="darkUpBtn">
+                        <p>03</p>
+                        <a href="#turquoiseAside"><img src="./images/upBtn.png" alt=""></a>
+                    </li>
+                    <li class="darkDownBtn">
+                        <a href="#"><img src="./images/downBtn.png" alt=""></a>
+                    </li>
+                </ul>
+
+                <div class="indicator4">
+                    <div class="indicatorLineBg4">
+                        <div class="indicatorLine4"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+
+        <!--about / sectionTitle2-->
+        <section id="about">
+            <span class="aboutLine1"></span>
+            <div class="sectionTitle2">
+                <h3>ABOUT</h3>
+                <p>크로우캐년홈의 에나멜웨어</p>
+            </div>
+            <div class="aboutContent">
+                <p>크로우캐년홈은(crowcanyonhome)은 미국 샌프란시스코 베이스의 법랑키친 에나멜웨어 브랜드 제품입니다.<br>
+                    지속 가능하고 청결하면서 디자인까지 멋진 제품은 없을까라는 아이디어에서 시작하여 만들어졌습니다.<br>
+                    법랑이라는 소재에 마블 패턴을 입힌 브랜드로, 모던한 디자인으로 전세계적인 사랑받고 있는 브랜드입니다.</p>
+            </div>
+            <div class="moveText1">
+                <p>🍽야외에서 캠핑 모험을 즐기거나 집에서 아늑한 가족 모임을 즐기는데도 적합한 아이템🍽</p>
+            </div>
+            <div class="moveText2">
+                <p>🍽선물용으로도 좋고 개인 소장용으로도 좋은 힙한 감성 아이템🍽</p>
+            </div>
+            <div class="videoBefore">
+                <div class="videoBox">
+                    <video autoplay loop poster="./images/videoImg.png" muted>
+                        <source src="" type="video/mp4">
+                    </video> 
+                </div>
+                <div class="videoMoreBtn">
+                    <a href="#">
+                        <div class="videoMoreBtnBg">
+                            <img src="./images/roundText2.png" alt="">
+                        </div>
+
+                        <div class="videoMoreText">
+                            <p>영상더보기</p>
+                            <img src="./images/videoMorePlayBtn.png" class="playBtn" alt="">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <span class="aboutLine2"></span>
+        </section>
+
+        <!--magazine / sectionTitle3-->
+        <section id="magazine">
+            <div class="sectionTitle3">
+                <h3>MAGAZINE</h3>
+                <p>크로우캐년홈에 대한 모든 소식</p>
+            </div>
+
+
+            <div class="cardBox">
+                <!--가운데로-->
+                <div class="imgBox">
+                    <!--이미지박스,텍스트,타이틀 -->
+                    <div class="card">
+                        <img src="./images/magazine1.jpg" alt="">
+                        <div class="grayBox">
+                            <a href="https://crowcanyon.co.kr/article/%EB%A7%A4%EA%B1%B0%EC%A7%84/8/34438/page/2/">
+                                <div class="title">크로우캐년홈 X zerolab</div>
+                                <p class="contentText">
+                                    크로우캐년홈의 베스트 셀러 블랙마블 컬러와<br>
+                                    제로랩의 stool365 프로젝트가 만났습니다.</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="./images/magazine2.jpg" alt="">
+                        <div class="grayBox">
+                            <a href="https://crowcanyon.co.kr/article/%EB%A7%A4%EA%B1%B0%EC%A7%84/8/37117/page/1/">
+                                <div class="title">Ecopixel 에코픽셀</div>
+                                <p class="contentText">
+                                    에코픽셀에 대해 우리가 좋아하는 것은<br>
+                                    "끝이 없는 재활용"개념입니다.
+                                    우리는 제품을 "다른 용도로 재사용할 수 있는 정확한 양의 <br>
+                                    물질"의 완벽한 예로, "그 무엇이었던가 앞으로 <br>
+                                    무엇이 될 것인가"라는 의미를 담습니다.</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="./images/magazine3.jpg" alt="">
+                        <div class="grayBox">
+                            <a href="https://crowcanyon.co.kr/article/%EB%A7%A4%EA%B1%B0%EC%A7%84/8/34813/page/1/">
+                                <div class="title">크로우캐년 X 라이프 카메라 출시!</div>
+                                <p class="contentText">
+                                    작년 베이비블루마블에 이어 반응이 뜨거웠던 <br>
+                                    라이프와 크로우캐년의 콜라보 카메라가 <br>
+                                    핑크마블로 버전 2 출시됩니다!
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="./images/magazine4.jpg" alt="">
+                        <div class="grayBox">
+                            <a href="https://crowcanyon.co.kr/article/%EB%A7%A4%EA%B1%B0%EC%A7%84/8/36735/page/1/">
+                                <div class="title">크로우캐년홈 X 뉴발란스 룩북</div>
+                                <p class="contentText">
+                                    6/11일(금) 크로우캐년홈과 뉴발란스의 콜라보 제품이 드디어 출시 됩니다.
+                                    착화감과 디자인 <br>
+                                    모두 사로잡은 제품이 멋지게 표현 된 룩북 <br>
+                                    소개해드릴게요!
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="./images/magazine5.png" alt="">
+                        <div class="grayBox">
+                            <a href="https://crowcanyon.co.kr/article/%EB%A7%A4%EA%B1%B0%EC%A7%84/8/37163/page/1/">
+                                <div class="title">제품 관리 요령</div>
+                                <p class="contentText">
+                                    ■법랑 제품을 다양하게 사용하기 (클릭)<br>
+                                    *적은 양의 세제, 부드러운 수세미로 부드럽게 <br>
+                                    세척해 주세요.<br>
+                                    *세척 후 제품을 바로 건조를 시켜주시면 <br> 녹을 방지할 수 있습니다.
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="./images/magazine6.jpg" alt="">
+                        <div class="grayBox">
+                            <a href="https://crowcanyon.co.kr/article/%EB%A7%A4%EA%B1%B0%EC%A7%84/8/34783/page/1/">
+                                <div class="title">스마트톡(그립톡) 오픈 관련 공지</div>
+                                <p class="contentText">
+                                    스마트톡 오픈 관련 안내 드립니다 :)<br>
+                                    일시: 10/23일 오후 1시<br>
+                                    공식온라인몰: (http://crowcanyon.co.kr)<br>
+                                    1차 오픈컬러: 레드, 핑크, 퍼플, 옐로우, 블랙<br>
+                                    출고는 10/25(월)부터 순차 출고됩니다.</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="./images/magazine7.jpg" alt="">
+                        <div class="grayBox">
+                            <a href="https://crowcanyon.co.kr/article/%EB%A7%A4%EA%B1%B0%EC%A7%84/8/34953/page/1/">
+                                <div class="title">CREATE YOUR HOME</div>
+                                <p class="contentText">
+                                    CREATE YOUR HOME<br>
+                                    페이크 푸드를 활용해 위트 있는 화보를 찍어 <br>
+                                    보았습니다. 크로우캐년홈의 제품들이 가진<br>
+                                    컬러와 패턴만으로도 식탁을 포함한 집을 <br>
+                                    재미있게 채울 수 있다는 메시지를 담았습니다.
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="./images/magazine8.jpg" alt="">
+                        <div class="grayBox">
+                            <a href="https://crowcanyon.co.kr/article/%EB%A7%A4%EA%B1%B0%EC%A7%84/8/37156/page/1/">
+                                <div class="title">옐로잉 현상</div>
+                                <p class="contentText">
+                                    그레이 마블, 퍼플 마블, 핑크 마블 등의 색이 연한 <br>
+                                    제품에서 흔히 나타나며 정상으로 분류되어 <br>
+                                    판매중이기에 불량 사우에 해당하지 않아<br>
+                                    유상 교환만 가능한 점 안내드립니다.
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!--footer-->
+        <footer>
+            <div class="footerText">
+                <h4>02-336-5288</h4>
+                <p>운영시간 : 평일 AM10:00 - PM7:00 <br>
+                    점심시간 : 평일 PM12:00 - PM1:00<br>
+                    주말 및 공휴일 휴무</p>
+            </div>
+
+            <ul class="footerNav">
+                <li><a href="#">GUIDE</a></li>
+                <li><a href="#">PRIVACY</a></li>
+                <li><a href="#">AGREEMENT</a></li>
+                <li><a href="#">ABOUT US</a></li>
+            </ul>
+
+            <ul class="footerSns">
+                <li><a href="#"><img src="./images/insta.png" alt=""></a></li>
+                <li><a href="#"><img src="./images/facebook.png" alt=""></a></li>
+                <li><a href="#"><img src="./images/youtube.png" alt=""></a></li>
+                <li><a href="#"><img src="./images/blog.png" alt=""></a></li>
+            </ul>
+
+            <span class="footerLine"></span>
+
+            <div class="footerBottom">
+                <p>스코프컴퍼니 주식회사&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;배유나&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;03961 서울특별시
+                    마포구 방울내로7길
+                    8 (망원동) 반석빌딩 3층</p>
+                <span>COPYRIGHT © 2021 BY CROWCANYON. ALL RIGHTS RESERVED. </span>
+            </div>
+
+            <div class="topBtn">
+                <div class="topBtnText">
+                    <p>GO TOP</p>
+                    <div class="topImg">
+                        <img src="./images/lightTopArrow.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+</body>
+
+</html>
